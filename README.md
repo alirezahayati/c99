@@ -1,1 +1,1 @@
-# c99
+python3 c99.py walmart.com
