@@ -36,7 +36,7 @@ def c99_nl():
                 
                 if post_response.status_code == 200:
                     soup = BeautifulSoup(post_response.text, 'html.parser')
-                    subdomain_links = re.findall(r'(?:\b(?:\w+\.)+\w+\b)', soup.text)
+                    subdomain_links = re.findall(r'(?:\b\w+(?:[-.]\w+)*\.\w+\b)', soup.text)
                     checker = subdomain_links.count(target)
                     if checker > 0:
                         for link in subdomain_links:
